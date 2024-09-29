@@ -38,7 +38,7 @@ const Display = (props) => {
                         ${product.new_price}
                     </div>
                     <div className='productdisplay-right-description'>
-                        A lightweight usually knitted
+                        The breathable fabric ensures all-day comfort, while the curved hem allows for versatile wear, tucked in or left out. Easy to pair with jeans or trousers, this shirt is ideal for the office, casual gatherings, or weekend outings.
                     </div>
                     <div className='productdisplay-right-size'>
                         <h1>Select Size</h1>
