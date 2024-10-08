@@ -10,7 +10,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-app.use('/images', express.static(path.join(__dirname, 'public/images')));
+app.use('/images', express.static(path.join(__dirname, 'upload/images')));
 
 //Database Connection with MongoDB
 mongoose.connect("mongodb+srv://anjalidaharwal5:jrnJCnyR6WarKZfA@clustor0.lscmz.mongodb.net/ShopSpot");
