@@ -13,6 +13,13 @@ app.use(cors());
 //Database Connection with MongoDB
 mongoose.connect("mongodb+srv://anjalidaharwal5:jrnJCnyR6WarKZfA@clustor0.lscmz.mongodb.net/ShopSpot");
 
+
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
+
 // API Creation
 app.get("/", (req, res) => {
     res.send("Express App is Running");
