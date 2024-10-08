@@ -17,7 +17,7 @@ const LoginSignup = () => {
     const login = async () => {
         console.log("Login fun executed", formData);
         let responseData;
-        await fetch('https://shop-spot.onrender.com/login', {
+        await fetch('http://localhost:3000login', {
             method: 'POST',
             headers: {
                 Accept: 'application/form-data',
@@ -38,7 +38,7 @@ const LoginSignup = () => {
     const signup = async () => {
         console.log("Signup fun executed", formData);
         let responseData;
-        await fetch('https://shop-spot.onrender.com/signup', {
+        await fetch('http://localhost:3000signup', {
             method: 'POST',
             headers: {
                 Accept: 'application/form-data',

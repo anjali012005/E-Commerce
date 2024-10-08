@@ -15,10 +15,10 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(() => {
-        fetch('https://shop-spot.onrender.com/allproducts').then((response) => response.json()).then((data) => setAll_Product(data))
+        fetch('http://localhost:3000allproducts').then((response) => response.json()).then((data) => setAll_Product(data))
 
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shop-spot.onrender.com/getcart', {
+            fetch('http://localhost:3000getcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -34,7 +34,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shop-spot.onrender.com/addtocart', {
+            fetch('http://localhost:3000addtocart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -49,7 +49,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shop-spot.onrender.com/removefromcart', {
+            fetch('http://localhost:3000removefromcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',

@@ -29,7 +29,7 @@ const AddProduct = () => {
         let formData = new FormData();
         formData.append('product', image);
 
-        await fetch('https://shop-spot.onrender.com/upload', {
+        await fetch('http://localhost:3000upload', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -40,7 +40,7 @@ const AddProduct = () => {
         if (responseData.success) {
             product.image = responseData.image_url;
             console.log(product);
-            await fetch('https://shop-spot.onrender.com/addproduct', {
+            await fetch('http://localhost:3000addproduct', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
