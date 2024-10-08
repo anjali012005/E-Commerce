@@ -7,7 +7,7 @@ const NewCollections = () => {
     const [new_collection, setNew_collection] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/newcollection').then((response) => response.json()).then((data) => setNew_collection(data));
+        fetch('https://shop-spot.onrender.com/newcollection').then((response) => response.json()).then((data) => setNew_collection(data));
     }, [])
     return (
         <div className='new-collections'>
